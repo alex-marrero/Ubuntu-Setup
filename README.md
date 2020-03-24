@@ -3,11 +3,20 @@
 ### Basic Ubuntu Setup Includes
 - Microsoft Teams
 - Chrome
+- VS Code
+
+##### Pending
 - VPN Setup
 - Citrix Workspace
 - Displaylink Drivers for USB Docks
-- VS Code
-- AD Join (Pending)
-- Wifi Certs (Pending)
+- AD Join
+- Wifi Certs
 
 #### Instructions
+Instructions will go here
+
+##### Credit
+- https://opensource.com/article/18/3/manage-workstation-ansible
+
+- https://opensource.com/article/18/3/manage-your-workstation-configuration-ansible-part-2
+
