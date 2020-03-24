@@ -7,8 +7,8 @@
   - name: Install snap
     apt: name=snapd
 
-  - name: Install Visual Studio Code
-      snap: 
+  - name: Install Snap Apps
+    snap: 
       name: 
        - code
        - chromium
