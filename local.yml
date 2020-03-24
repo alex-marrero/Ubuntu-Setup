@@ -9,12 +9,19 @@
 
   - name: Install Snap Apps
     snap: 
-      name: 
-       - code
-       - chromium
-       - teams-for-linux
-       classic: yes
+      name: code
+      classic: yes 
 
+  - name: Install Snap Apps
+    snap: 
+      name: chromium
+      classic: yes       
+       
+  - name: Install Snap Apps
+    snap: 
+      name: teams-for-linux
+      classic: yes       
+       
   - name: Install Powershell
     apt: name=powershell
 
