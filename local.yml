@@ -14,6 +14,9 @@
        - chromium
        - teams-for-linux
 
+  - name: Install Powershell
+    apt: name=powershell
+
   - name: Download Citrix deb File
     get_url: 
       url: http://coivanmgt01p/packages/Linux/icaclient_19.12.0.19_amd64.deb
