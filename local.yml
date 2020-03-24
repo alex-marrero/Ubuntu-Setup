@@ -7,23 +7,25 @@
   - name: Install snap
     apt: name=snapd
 
-  - name: Install Snap Apps
+  - name: Install Snap VS Code
     snap: 
       name: code
       classic: yes 
 
-  - name: Install Snap Apps
+  - name: Install Snap Chromium
     snap: 
       name: chromium
       classic: yes       
        
-  - name: Install Snap Apps
+  - name: Install Snap Microsoft Teams
     snap: 
       name: teams-for-linux
       classic: yes       
        
-  - name: Install Powershell
-    apt: name=powershell
+  - name: Install Snap Microsoft Teams
+    snap: 
+      name: powershell
+      classic: yes 
 
   - name: Download Citrix deb File
     get_url: 
