@@ -13,6 +13,7 @@
        - code
        - chromium
        - teams-for-linux
+       classic: yes
 
   - name: Install Powershell
     apt: name=powershell
