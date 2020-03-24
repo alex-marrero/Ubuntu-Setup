@@ -1,0 +1,19 @@
+- hosts: localhost
+  become: true
+  tasks:
+  - name: Install htop
+    apt: name=htop
+
+  - name: Install code
+    apt: name=code
+
+  - name: Download Citrix deb File
+    get_url: 
+      url: http://coivanmgt01p/packages/Linux/icaclient_19.12.0.19_amd64.deb
+      dest: ~/Downloads/icaclient_19.12.0.19_amd64.deb
+    
+  - name: Download Carbon Black tar file
+    get_url: 
+      url: http://coivanmgt01p/packages/Linux/cb-psc-sensor-ubuntu-2.2.0.127.tar
+      dest: ~/Downloads/cb-psc-sensor-ubuntu-2.2.0.127.tar
+    
