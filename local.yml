@@ -4,8 +4,15 @@
   - name: Install htop
     apt: name=htop
 
-  - name: Install code
-    apt: name=code
+  - name: Install snap
+    apt: name=snapd
+
+  - name: Install Visual Studio Code
+      snap: 
+      name: 
+       - code
+       - chromium
+       - teams-for-linux
 
   - name: Download Citrix deb File
     get_url: 
