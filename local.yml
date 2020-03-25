@@ -7,6 +7,21 @@
      - snapd
      - htop
      - unzip
+     - git
+     - meld
+     - python3
+     - binutils
+     - curl
+     - ghex
+     - openssl
+     - vim
+     - jq
+     - ca-certificates
+     - apt-transport-https 
+     - lsb-release 
+     - gnupg
+
+     
 
   - name: Install Snap VS Code
     snap: 
@@ -28,15 +43,12 @@
       name: powershell
       classic: yes 
 
-  - name: Install Azure CLI
-    snap: 
-      name: azure-cli
-      channel: candidate
-      classic: yes 
+  - name: Download and Setup Azure-CLI files
+    shell: curl -L https://aka.ms/InstallAzureCli | bash >> /tmp/install_log.txt
 
   - name: Download Citrix deb File
     get_url: 
-      url: https://downloads.citrix.com/16914/icaclient_19.12.0.19_amd64.deb?__gda__=1585169702_42a0373494d926c3adac751e16272ac9
+      url: http://coivanmgt01p/packages/Linux/icaclient_19.12.0.19_amd64.deb
       dest: ~/Downloads/icaclient_19.12.0.19_amd64.deb
     
   - name: Download Carbon Black tar file
