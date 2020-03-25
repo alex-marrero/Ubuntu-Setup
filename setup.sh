@@ -11,8 +11,11 @@ apt-add-repository -y ppa:ansible/ansible &&
 apt-get -y update &&
 apt-get -y install ansible &&
 
-echo "Pulling Ansible Playbook for Setup"
+echo "Install Git"
+apt-get -y install git
 
-git clone https://github.com/alex-marrero/MDX-Ubuntu-Setup.git
+echo Done
+
+
 
 
