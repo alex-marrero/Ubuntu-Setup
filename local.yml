@@ -38,8 +38,11 @@
 
   - name: Run the equivalent of "apt-get update" as a separate step
     apt:
-     name: oracle-java8-installer
      update_cache: yes
+
+  - name: Install Oracle Java 8
+    apt: 
+      name: oracle-java8-installer
 
   - name: Download Citrix deb File
     get_url: 
