@@ -44,7 +44,7 @@
     apt: 
      name: oracle-java8-installer
      state: latest
-     install_reccomends: no
+     install_recommends: no
 
   - name: Download Citrix deb File
     get_url: 
