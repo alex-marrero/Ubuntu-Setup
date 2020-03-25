@@ -6,6 +6,7 @@
      pkg:
      - snapd
      - htop
+     - unzip
 
   - name: Install Snap VS Code
     snap: 
@@ -66,4 +67,9 @@
     get_url: 
       url: http://coivanmgt01p/packages/Linux/cb-psc-sensor-ubuntu-2.2.0.127.tar
       dest: ~/Downloads/cb-psc-sensor-ubuntu-2.2.0.127.tar
+
+  - name: Download Citrix deb File
+    get_url: 
+      url: http://coivanmgt01p/packages/JAVA/Linux/jre-8u241-linux-x64.tar.gz
+      dest: ~/Downloads/jre-8u241-linux-x64.tar.gz
     
