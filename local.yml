@@ -1,58 +1,72 @@
 - hosts: localhost
   become: true
   tasks:
-  - name: Install Apps from APT
-    apt: 
+- name: Install Apps from APT
+  apt: 
      pkg:
      - snapd
      - htop
 
-  - name: Install Snap VS Code
-    snap: 
+- name: Install Snap VS Code
+  snap: 
       name: code
       classic: yes 
 
-  - name: Install Snap Chromium
-    snap: 
+- name: Install Snap Chromium
+  snap: 
       name: chromium
       classic: yes       
        
-  - name: Install Snap Microsoft Teams
-    snap: 
+- name: Install Snap Microsoft Teams
+  snap: 
       name: teams-for-linux
       classic: yes       
        
-  - name: Install Snap Powershell
-    snap: 
+- name: Install Snap Powershell
+  snap: 
       name: powershell
       classic: yes 
 
-  - name: Install Azure CLI
-    snap: 
+- name: Install Azure CLI
+  snap: 
       name: azure-cli
       channel: candidate
       classic: yes 
 
-  - apt_repository:
+- apt_repository:
      repo: ppa:webupd8team/java
+     
+- name: Install add-apt-repostory
+  become: yes
+  apt: name=software-properties-common state=latest
 
-  - name: Run the equivalent of "apt-get update" as a separate step
-    apt:
+- name: Add Oracle Java Repository
+  become: yes
+  apt_repository: repo='ppa:webupd8team/java'
+
+- name: Accept Java 8 License
+  become: yes
+  debconf: name='oracle-java8-installer' question='shared/accepted-oracle-license-v1-1' value='true' vtype='select'
+
+- name: Run the equivalent of "apt-get update" as a separate step
+  apt:
      update_cache: yes
 
-  - name: Install Oracle Java 8
-    apt: 
-     name: oracle-java8-installer
-     state: latest
-     install_recommends: no
+- name: Install Oracle Java 8
+  become: yes
+  apt: name={{item}} state=latest
+  with_items:
+    - oracle-java8-installer
+    - ca-certificates
+    - oracle-java8-set-default
 
-  - name: Download Citrix deb File
-    get_url: 
+- name: Download Citrix deb File
+  get_url: 
       url: http://coivanmgt01p/packages/Linux/icaclient_19.12.0.19_amd64.deb
       dest: ~/Downloads/icaclient_19.12.0.19_amd64.deb
     
-  - name: Download Carbon Black tar file
-    get_url: 
+- name: Download Carbon Black tar file
+  get_url: 
       url: http://coivanmgt01p/packages/Linux/cb-psc-sensor-ubuntu-2.2.0.127.tar
       dest: ~/Downloads/cb-psc-sensor-ubuntu-2.2.0.127.tar
     
