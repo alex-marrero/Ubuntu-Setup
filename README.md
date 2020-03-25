@@ -2,7 +2,7 @@
 
 ### Basic Ubuntu Setup Includes
 - Microsoft Teams
-- Chrome
+- Chromium
 - VS Code
 
 ##### Pending
