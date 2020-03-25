@@ -6,7 +6,6 @@
      pkg:
      - snapd
      - htop
-     - default-jdk
 
   - name: Install Snap VS Code
     snap: 
@@ -23,15 +22,23 @@
       name: teams-for-linux
       classic: yes       
        
-  - name: Install Snap Microsoft Teams
+  - name: Install Snap Powershell
     snap: 
       name: powershell
       classic: yes 
 
-  - name: Install Snap Microsoft Teams
+  - name: Install Azure CLI
     snap: 
       name: azure-cli
       classic: yes 
+
+   - apt_repository:
+     repo: ppa:webupd8team/java
+
+- name: Run the equivalent of "apt-get update" as a separate step
+  apt:
+    name: oracle-java8-installer
+    update_cache: yes
 
   - name: Download Citrix deb File
     get_url: 
