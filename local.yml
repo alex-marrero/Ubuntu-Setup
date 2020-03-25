@@ -34,7 +34,7 @@
       classic: yes 
 
   - apt_repository:
-    repo: ppa:webupd8team/java
+      repo: ppa:webupd8team/java
 
   - name: Install add-apt-repostory
     become: yes
