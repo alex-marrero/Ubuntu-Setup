@@ -4,6 +4,22 @@
 - Microsoft Teams
 - Chromium
 - VS Code
+- snapd
+- htop
+- unzip
+- git
+- meld
+- python3
+- binutils
+- curl
+- ghex
+- openssl
+- vim
+- jq
+- ca-certificates
+- apt-transport-https 
+- lsb-release 
+- gnupg
 
 ##### Pending
 - VPN Setup
