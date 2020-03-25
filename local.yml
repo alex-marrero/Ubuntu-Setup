@@ -2,10 +2,11 @@
   become: true
   tasks:
   - name: Install htop
-    apt: name=htop
-
-  - name: Install snap
-    apt: name=snapd
+    apt: 
+     pkg:
+     - snapd
+     - htop
+     - default-jdk
 
   - name: Install Snap VS Code
     snap: 
@@ -25,6 +26,11 @@
   - name: Install Snap Microsoft Teams
     snap: 
       name: powershell
+      classic: yes 
+
+  - name: Install Snap Microsoft Teams
+    snap: 
+      name: azure-cli
       classic: yes 
 
   - name: Download Citrix deb File
