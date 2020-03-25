@@ -30,6 +30,7 @@
   - name: Install Azure CLI
     snap: 
       name: azure-cli
+      channel: candidate
       classic: yes 
 
   - apt_repository:
