@@ -32,13 +32,13 @@
       name: azure-cli
       classic: yes 
 
- - apt_repository:
-    repo: ppa:webupd8team/java
+  - apt_repository:
+     repo: ppa:webupd8team/java
 
-- name: Run the equivalent of "apt-get update" as a separate step
-  apt:
-    name: oracle-java8-installer
-    update_cache: yes
+  - name: Run the equivalent of "apt-get update" as a separate step
+    apt:
+     name: oracle-java8-installer
+     update_cache: yes
 
   - name: Download Citrix deb File
     get_url: 
