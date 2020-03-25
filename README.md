@@ -7,7 +7,7 @@
 
 ##### Pending
 - VPN Setup
-  - Oracle Java8 JRE 
+  - Oracle Java8 JRE (Dependancy for VPN)
 - Citrix Workspace
 - Displaylink Drivers for USB Docks
 - AD Join
