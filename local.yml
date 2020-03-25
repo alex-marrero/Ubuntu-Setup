@@ -1,7 +1,7 @@
 - hosts: localhost
   become: true
   tasks:
-  - name: Install htop
+  - name: Install Apps from APT
     apt: 
      pkg:
      - snapd
