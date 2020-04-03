@@ -30,9 +30,11 @@
 - Wifi Certs
 
 #### Instructions
-Run Setup.sh file first to prepare configuration
+Run Setup.sh script first to prepare configuration
 
 then run in terminal "sudo ansible-pull https[]()://github.com/alex-marrero/Ubuntu-Setup.git"
+
+
 
 ##### Credit
 - https://opensource.com/article/18/3/manage-workstation-ansible
