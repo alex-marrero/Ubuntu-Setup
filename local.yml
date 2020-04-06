@@ -68,13 +68,18 @@
     apt: 
       deb: http://coivanmgt01p/packages/Linux/icaclient_19.12.0.19_amd64.deb
 
+  - name: Install Citrix SSL Cert
+    get_url: 
+      url: http://coivanmgt01p/packages/Linux/mednax-com.pem
+      dest: /opt/Citrix/ICAClient/keystore/cacerts/
+
   - name: Download Carbon Black tar file
     get_url: 
       url: http://coivanmgt01p/packages/Linux/cb-psc-sensor-ubuntu-2.2.0.127.tar
       dest: ~/Downloads/cb-psc-sensor-ubuntu-2.2.0.127.tar
 
   - name: Install Carbon Black Sensor
-    command: ./configure | make | sudo make install
+    command: ./configure | make | make install
     args:
       chdir: ~/Downloads/cb-psc-sensor-ubuntu-2.2.0.127/
 
