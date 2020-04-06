@@ -63,15 +63,10 @@
   - name: Install Azure-CLI package
     apt:
       name: azure-cli
-  
-  - name: Download Citrix deb File
-    get_url: 
-      url: http://coivanmgt01p/packages/Linux/icaclient_19.12.0.19_amd64.deb
-      dest: ~/Downloads/icaclient_19.12.0.19_amd64.deb
     
   - name: Install Citrix Workspace
-    apt: ~/Downloads/icaclient_19.12.0.19_amd64.deb
-    sudo: true
+    apt: 
+      deb: http://coivanmgt01p/packages/Linux/icaclient_19.12.0.19_amd64.deb
 
   - name: Download Carbon Black tar file
     get_url: 
