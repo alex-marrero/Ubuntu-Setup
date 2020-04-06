@@ -79,7 +79,7 @@
       dest: /tmp
       remote_src: yes
       extra_opts:
-      - -zwf
+      - -zvf
 
 
 
