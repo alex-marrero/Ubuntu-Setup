@@ -75,7 +75,7 @@
 
   - name: Download Carbon Black tar file
     unarchive:
-      url: http://coivanmgt01p/packages/Linux/cb_psc_sensor_ubuntu_2_2_0_127.tar.gz
+      src: http://coivanmgt01p/packages/Linux/cb_psc_sensor_ubuntu_2_2_0_127.tar.gz
       dest: /tmp
       remote_src: yes
 
