@@ -74,14 +74,12 @@
       dest: /opt/Citrix/ICAClient/keystore/cacerts/
 
   - name: Download Carbon Black tar file
-    unarchive:
-      src: http://coivanmgt01p/packages/Linux/cb-psc-sensor-ubuntu-2.2.0.127.tar
+    get_url:
+      src: http://coivanmgt01p/packages/Linux/cb_psc_sensor_ubuntu_2_2_0_127.tar.gz
       dest: /tmp
-      remote_src: yes
-
+      
   - name: Install Carbon Black Sensor
-    apt: 
-      deb: /tmp/cb-psc-sensor-ubuntu-2.2.0.127.deb
+    shell: tar -zwf /tmp/cb_psc_sensor_ubuntu_2_2_0_127.tar.gz
 
   - name: Download and UnArchive Java 8 Install
     unarchive:
