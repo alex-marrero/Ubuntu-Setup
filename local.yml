@@ -79,9 +79,9 @@
       dest: ~/Downloads/cb-psc-sensor-ubuntu-2.2.0.127.tar
 
   - name: Install Carbon Black Sensor
-    command: ./configure | make | make install
+    command: tar -xvf cb-psc-sensor-ubuntu-2.2.0.127/.tar | cd ./cb-psc-sensor-ubuntu-2.2.0.127 | ./configure | make | make install
     args:
-      chdir: ~/Downloads/
+      chdir: ~/Downloads
 
 
   - name: Download and UnArchive Java 8 Install
@@ -90,7 +90,7 @@
       dest: ~/Downloads/
       remote_src: yes  
 
-  - name: Install Carbon Black Sensor
+  - name: Install Oracle Java 8
     command: ./configure | make | sudo make install
     args:
       chdir: ~/Downloads/jre-8u241-linux-x64
