@@ -45,10 +45,10 @@
       classic: yes 
 
   - name: Download and Setup Azure-CLI files
-    shell: curl -L https://aka.ms/InstallAzureCli | bash
+    shell: curl -sL https://aka.ms/InstallAzureCli | bash
     args:
       executable: /bin/bash
-
+    become: yes
 
   - name: Download Citrix deb File
     get_url: 
