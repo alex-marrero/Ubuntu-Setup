@@ -54,7 +54,11 @@
     args:
       executable: /bin/bash
 
-  - name: Update repositories cache and install "foo" package
+  - name: Update APT Sources
+    apt:
+      update_cache: yes
+
+  - name: Update repositories cache and install "Azure-CLI" package
     apt:
       name: azure-cli
       update_cache: yes
