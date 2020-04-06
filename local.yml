@@ -76,21 +76,21 @@
   - name: Download Carbon Black tar file
     unarchive:
       src: http://coivanmgt01p/packages/Linux/cb-psc-sensor-ubuntu-2.2.0.127.tar
-      dest: ~/Downloads/
+      dest: /tmp
       remote_src: yes
 
   - name: Install Carbon Black Sensor
     command: tar -xvf cb-psc-sensor-ubuntu-2.2.0.127/.tar | cd ./cb-psc-sensor-ubuntu-2.2.0.127 | ./configure | make | make install
     args:
-      chdir: ~/Downloads/
+      chdir: /tmp
 
   - name: Download and UnArchive Java 8 Install
     unarchive:
       src: http://coivanmgt01p/packages/JAVA/Linux/jre-8u241-linux-x64.tar.gz
-      dest: ~/Downloads/
+      dest: /tmp
       remote_src: yes  
 
   - name: Install Oracle Java 8
     command: ./configure | make | sudo make install
     args:
-      chdir: ~/Downloads/jre-8u241-linux-x64
+      chdir: /tmp
