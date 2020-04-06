@@ -8,7 +8,6 @@
      - snapd
      - htop
      - unzip
-     - zipinfo
      - git
      - meld
      - python3
