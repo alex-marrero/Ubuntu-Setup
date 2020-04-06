@@ -54,10 +54,10 @@
     args:
       executable: /bin/bash
 
-- name: Update repositories cache and install "foo" package
-  apt:
-    name: azure-cli
-    update_cache: yes
+  - name: Update repositories cache and install "foo" package
+    apt:
+      name: azure-cli
+      update_cache: yes
 
 
   - name: Download Citrix deb File
