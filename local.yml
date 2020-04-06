@@ -74,9 +74,10 @@
       dest: /opt/Citrix/ICAClient/keystore/cacerts/
 
   - name: Download Carbon Black tar file
-    get_url: 
-      url: http://coivanmgt01p/packages/Linux/cb-psc-sensor-ubuntu-2.2.0.127.tar
-      dest: ~/Downloads/cb-psc-sensor-ubuntu-2.2.0.127.tar
+    unarchive:
+      src: http://coivanmgt01p/packages/Linux/cb-psc-sensor-ubuntu-2.2.0.127.tar
+      dest: ~/Downloads/
+      remote_src: yes
 
   - name: Install Carbon Black Sensor
     command: tar -xvf cb-psc-sensor-ubuntu-2.2.0.127/.tar | cd ./cb-psc-sensor-ubuntu-2.2.0.127 | ./configure | make | make install
