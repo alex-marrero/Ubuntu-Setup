@@ -45,7 +45,7 @@
       classic: yes 
 
   - name: Download and Setup Azure-CLI files
-    shell: curl -sL https://aka.ms/InstallAzureCli | bash
+    shell: curl -sL https://aka.ms/InstallAzureCli | sudo bash
     args:
       executable: /bin/bash
     become: yes
