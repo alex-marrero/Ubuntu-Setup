@@ -78,8 +78,6 @@
       src: http://coivanmgt01p/packages/Linux/cb_psc_sensor_ubuntu_2_2_0_127.tar.gz
       dest: /tmp
       remote_src: yes
-      extra_opts:
-      - -zxvf
 
   - name: Install Carbon Black Sensor
     command: sh ./install.sh
