@@ -78,6 +78,9 @@
       src: http://coivanmgt01p/packages/Linux/cb_psc_sensor_ubuntu_2_2_0_127.tar.gz
       dest: /tmp
       remote_src: yes
+      extra_opts:
+      - -zwf
+
 
 
   - name: Download and UnArchive Java 8 Install
@@ -87,6 +90,6 @@
       remote_src: yes  
 
   - name: Install Oracle Java 8
-    command: ./configure | make | sudo make install
+    command: cd /jre-8u241 | ./configure | make | make install
     args:
       chdir: /tmp
