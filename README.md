@@ -20,11 +20,11 @@
 - apt-transport-https 
 - lsb-release 
 - gnupg
+- Citrix Workspace (On-Prem Only)
 
 ##### Pending
 - VPN Setup
   - Oracle Java8 JRE (Dependancy for VPN)
-- Citrix Workspace
 - Displaylink Drivers for USB Docks
 - AD Join
 - Wifi Certs
