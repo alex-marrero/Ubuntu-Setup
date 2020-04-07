@@ -32,7 +32,7 @@
 #### Instructions
 Run Setup.sh script first to prepare configuration
 
-then run in terminal "sudo ansible-pull https[]()://github.com/alex-marrero/Ubuntu-Setup.git"
+then run in terminal "sudo ansible-pull -U https[]()://github.com/alex-marrero/Ubuntu-Setup.git"
 
 
 
