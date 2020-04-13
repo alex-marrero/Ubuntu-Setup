@@ -21,6 +21,7 @@
      - apt-transport-https 
      - lsb-release 
      - gnupg
+     - dkms
 
      
 
@@ -63,10 +64,14 @@
   - name: Install Azure-CLI package
     apt:
       name: azure-cli
+
+  - name: Install Goolge Chrome
+    apt: 
+      deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb     
     
   - name: Install Citrix Workspace
     apt: 
-      deb: http://coivanmgt01p/packages/Linux/icaclient_19.12.0.19_amd64.deb
+      deb: https://downloads.citrix.com/16914/icaclient_19.12.0.19_amd64.deb?__gda__=1586801590_71368b7f6152fa7e42bdaf71b7326b83
 
   - name: Install Citrix SSL Cert
     get_url: 

@@ -20,6 +20,7 @@
 - apt-transport-https 
 - lsb-release 
 - gnupg
+- dkms
 - Citrix Workspace (On-Prem Only)
 
 ##### Pending
@@ -30,13 +31,15 @@
 - Wifi Certs
 
 #### Instructions
-Run Setup.sh script first to prepare configuration
 
-then run in terminal "sudo ansible-pull -U https[]()://github.com/alex-marrero/Ubuntu-Setup.git"
+Run Setup.sh script first to prepare configuration by running in a terminal window
+    
+    wget -O https://github.com/alex-marrero/Ubuntu-Setup/blob/master/setup.sh | bash
+
 
 
 
 ##### Credit
 - https://opensource.com/article/18/3/manage-workstation-ansible
-
+    
 - https://opensource.com/article/18/3/manage-your-workstation-configuration-ansible-part-2
