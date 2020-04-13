@@ -32,7 +32,7 @@
 
 #### Instructions
 
-Run Setup.sh script first to prepare configuration by running in a terminal window
+Run Setup.sh script first to prepare configuration by running below in a terminal window
     
     wget -O https://github.com/alex-marrero/Ubuntu-Setup/blob/master/setup.sh | bash
 
