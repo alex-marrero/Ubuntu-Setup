@@ -16,6 +16,7 @@ sleep 5
 apt-get -y install git
 
 echo "Starting Ansible-Pull function"
+sudo ansible-pull -U https://github.com/alex-marrero/Ubuntu-Setup.git
 sleep 10
 
 echo Done
