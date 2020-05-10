@@ -7,7 +7,7 @@
 - name: download pip installer
   get_url:
     url=https://bootstrap.pypa.io/get-pip.py
-    dest="/temp/get-pip.py"
+    dest="/tmp/get-pip.py"
   become: yes
   when: pip_task_installed is defined and
         pip_task_installed.rc is defined and
