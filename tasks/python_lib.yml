@@ -1,2 +1,49 @@
+- name: check if pip is installed
+  command: which pip
+  register: pip_task_installed
+  changed_when: no
+  failed_when: no
+
+- name: download pip installer
+  get_url:
+    url=https://bootstrap.pypa.io/get-pip.py
+    dest="{{ pip_dir_source }}/get-pip.py"
+  become: yes
+  when: pip_task_installed is defined and
+        pip_task_installed.rc is defined and
+        pip_task_installed.rc != 0
+
+- name: run installer
+  command: "{{ ansible_python_interpreter | default('python') }} {{ pip_dir_source }}/get-pip.py"
+  become: yes
+  when: pip_task_installed is defined and
+        pip_task_installed.rc is defined and
+        pip_task_installed.rc != 0
+
+- name: check installed version
+  command: pip --version
+  register: pip_task_version
+  changed_when: no
+  failed_when: no
+
+- name: ensure correct pip version is installed
+  pip:
+    name=pip
+    version="{{ pip_version }}"
+  become: yes
+  when: pip_task_version is defined and
+        pip_task_version.stdout is defined and
+        pip_task_version.stdout.find("pip "+ pip_version +" from") == -1
+
+
+
+
+
+
+
+
+
+
+
 - pip:  
     name: python-requests  
