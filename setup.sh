@@ -15,10 +15,11 @@ apt-get -y install ansible &&
     # create User ansible
     # generating ssh key for ansible
     # adding to pivate repo through script and stoing in github/ansible secrets?
-#echo "Starting Ansible-Pull function"
-#sudo ansible-pull -U https://github.com/alex-marrero/Ubuntu-Setup.git
-#sleep 10
-echo Done
+echo "Start Ansible-Pull function"
+sleep 10
+sudo ansible-pull -U --ask-pass https://github.com/alex-marrero/Ubuntu-Setup.git
+
+
 
 
 
