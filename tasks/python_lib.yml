@@ -9,16 +9,11 @@
     url=https://bootstrap.pypa.io/get-pip.py
     dest="/tmp/get-pip.py"
   become: yes
-  when: pip_task_installed is defined and
-        pip_task_installed.rc is defined and
-        pip_task_installed.rc != 0
 
 - name: run installer
-  command: "{{ ansible_python_interpreter | default('python') }} /tmp/get-pip.py"
-  become: yes
-  when: pip_task_installed is defined and
-        pip_task_installed.rc is defined and
-        pip_task_installed.rc != 0
+  script: /tmp/get-pip.py
+  args:
+    executable: python3
 
 - name: check installed version
   command: pip --version
@@ -26,24 +21,6 @@
   changed_when: no
   failed_when: no
 
-- name: ensure correct pip version is installed
-  pip:
-    name=pip
-    version="{{ pip_version }}"
-  become: yes
-  when: pip_task_version is defined and
-        pip_task_version.stdout is defined and
-        pip_task_version.stdout.find("pip "+ pip_version +" from") == -1
-
-
-
-
-
-
-
-
-
-
-
-- pip:  
+- name: Install Python Requests
+  pip:  
     name: python-requests  
