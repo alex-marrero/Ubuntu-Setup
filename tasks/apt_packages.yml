@@ -8,6 +8,7 @@
      - git
      - meld
      - python3
+     - python-pip
      - binutils
      - curl
      - ghex

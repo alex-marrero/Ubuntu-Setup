@@ -1,26 +1,3 @@
-- name: check if pip is installed
-  command: which pip
-  register: pip_task_installed
-  changed_when: no
-  failed_when: no
-
-- name: download pip installer
-  get_url:
-    url=https://bootstrap.pypa.io/get-pip.py
-    dest="/tmp/get-pip.py"
-  become: yes
-
-- name: run installer
-  script: /tmp/get-pip.py
-  args:
-    executable: python3
-
-- name: check installed version
-  command: pip --version
-  register: pip_task_version
-  changed_when: no
-  failed_when: no
-
 - name: Install Python Requests
   pip:  
     name: python-requests  
