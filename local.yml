@@ -7,10 +7,10 @@
 
   tasks:
     - include: tasks/users.yml
+    - include: tasks/apt_packages.yml
     - include: tasks/python_lib.yml
     - include: tasks/cron.yml
     - include: tasks/gnome.yml
-    - include: tasks/apt_packages.yml
     - include: tasks/custom_packages.yml
     - include: tasks/azcli_package.yml
     - include: tasks/citrix_package.yml
