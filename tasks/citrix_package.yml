@@ -1,0 +1,6 @@
+- name: Install Citrix Workspace
+  apt: 
+    deb: files/icaclient_19.12.0.19_amd64.deb
+
+- name: Copy Citrix SSL Cert
+  copy: src=files/mednax-com.pem dest=/opt/Citrix/ICAClient/keystore/cacerts/ owener=root mode=0040

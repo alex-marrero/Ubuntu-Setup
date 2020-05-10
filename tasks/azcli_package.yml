@@ -1,0 +1,18 @@
+- name: Download and Install the Microsoft Signing Key
+  shell: curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
+  args:
+    executable: /bin/bash
+    warn: false
+
+- name: Add the Azure CLI software repository
+  shell: echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ bionic main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
+  args:
+    executable: /bin/bash
+
+- name: Update APT Sources
+  apt:
+    update_cache: yes
+
+- name: Install Azure-CLI package
+  apt:
+    name: azure-cli

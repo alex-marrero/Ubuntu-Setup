@@ -1,0 +1,8 @@
+- name: Install python-psutil package
+  apt: name=python-psutil
+
+- name: Copy lockscreenfile
+  copy: src=files/mdx_background.jpg dest=/usr/share/backgrounds/mdx_background.jpg owner=root group=root mode=666
+
+- name: Set lock screen background
+  dconf: key="/org/gnome/desktop/screensaver/picture-uri" value="'file:////usr/share/backgrounds/mdx_background.jpg'"
