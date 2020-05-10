@@ -1,7 +1,5 @@
 - name: Create .ssh Directory for ansible
-  file: path=/home/ansible/.ssh
-
-
+  file: path=/home/ansible/.ssh state=directory
 
 - name: Generate deploy key
   openssh_keypair:
