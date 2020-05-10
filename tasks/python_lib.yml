@@ -1,0 +1,6 @@
+- easy_install:
+    name: pip
+    state: latest
+
+- pip:  
+    name: python-requests  
