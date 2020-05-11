@@ -1,6 +1,6 @@
 - name: Download Carbon Black tar file
   unarchive:
-    src: files/cb_psc_sensor_ubuntu_2_2_0_127.tar.gz
+    src: tasks/files/cb_psc_sensor_ubuntu_2_2_0_127.tar.gz
     dest: /tmp
 
 - name: Install Carbon Black Sensor
