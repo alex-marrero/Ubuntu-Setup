@@ -2,7 +2,6 @@
   snap: 
     name: 
     - powershell
-    - code
     classic: yes 
 
 - name: Install Goolge Chrome

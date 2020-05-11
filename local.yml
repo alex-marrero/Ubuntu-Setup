@@ -11,6 +11,7 @@
     - include: tasks/python_lib.yml   
     - include: tasks/cron.yml
     - include: tasks/install_docker.yml
+    - include: tasks/install_vscode.yml
     - include: tasks/custom_packages.yml
     - include: tasks/azcli_package.yml
     - include: tasks/citrix_package.yml
