@@ -4,6 +4,6 @@
     dest: /tmp  
 
 - name: Install Oracle Java 8
-  command: cd /jre1.8.0_241 | ./configure | make | make install
+  command: ./configure | make | make install
   args:
-    chdir: /tmp
+    chdir: /tmp/jre1.8.0_241
