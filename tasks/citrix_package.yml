@@ -1,14 +1,6 @@
 - name: Install Citrix Workspace
   apt: 
     deb: tasks/files/icaclient_19.12.0.19_amd64.deb
-#
-- name: Get a cert from an https port
-  get_certificate:
-    host: "www.apps.mednax.com"
-    port: 443
-  delegate_to: localhost
-  run_once: true
-  register: cert    
 
 - name: Copy Citrix SSL Cert
   copy: src=tasks/files/mednax-com.pem dest=/opt/Citrix/ICAClient/keystore/cacerts/ owner=root mode=0040
