@@ -3,4 +3,4 @@
     deb: tasks/files/icaclient_19.12.0.19_amd64.deb
 
 - name: Copy Citrix SSL Cert
-  copy: src=tasks/files/mednax-com.pem dest=/opt/Citrix/ICAClient/keystore/cacerts/ owener=root mode=0040
+  copy: src=tasks/files/mednax-com.pem dest=/opt/Citrix/ICAClient/keystore/cacerts/ owner=root mode=0040
