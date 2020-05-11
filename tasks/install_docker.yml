@@ -1,0 +1,21 @@
+- name: Download and Install Docker's GPG Key
+  shell: curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor | sudo apt-key add -
+  args:
+    executable: /bin/bash
+    warn: false
+
+- name: Add the Docker software repository
+  shell: echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu/  $(lsb_release -cs) stable" 
+  args:
+    executable: /bin/bash
+
+- name: Update APT Sources
+  apt:
+    update_cache: yes
+
+- name: Install Docker
+  apt: 
+   pkg:
+    - docker-ce
+    - docker-ce-cli
+    - containerd.io

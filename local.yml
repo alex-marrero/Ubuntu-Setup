@@ -12,6 +12,7 @@
     - include: tasks/create_deploykey.yml 
     - include: tasks/add_deploykey.yml    
     - include: tasks/cron.yml
+    - include: tasks/install_docker.yml
 #    - include: tasks/gnome.yml
     - include: tasks/custom_packages.yml
 #    - include: tasks/CB_Sensor.yml
