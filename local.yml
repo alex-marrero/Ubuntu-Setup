@@ -10,7 +10,7 @@
     - include: tasks/apt_packages.yml
     - include: tasks/python_lib.yml
     - include: tasks/create_deploykey.yml 
-    - include: tasks/github_deploykey.yml    
+    - include: tasks/add_deploykey.yml    
     - include: tasks/cron.yml
 #    - include: tasks/gnome.yml
     - include: tasks/custom_packages.yml
