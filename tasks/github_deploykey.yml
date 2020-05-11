@@ -8,8 +8,7 @@
 
 - name: Generate deploy key
   openssh_keypair:
-    path: "/home/ansible/.ssh/github_deploykey"
-    type: rsa
+    path: /home/ansible/.ssh/github_deploykey
 
 - github_deploy_key:
     owner: "alex-marrero"
