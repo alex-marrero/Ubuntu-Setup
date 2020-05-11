@@ -6,8 +6,10 @@
 
 - name: Install Micirsoft's GPG Key
   shell: sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+  become: yes
   args:
     executable: /bin/bash
+    
 
 - name: Add the VS Code repository
   shell: sudo sh -c 'echo "deb [arch=amd64 signed-by=/usr/share/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'

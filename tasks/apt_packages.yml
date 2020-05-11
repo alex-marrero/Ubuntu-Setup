@@ -5,7 +5,6 @@
      - apt-transport-https
      - gnupg
      - gnupg-agent 
-     - snapd
      - htop
      - unzip
      - git
