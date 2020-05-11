@@ -1,0 +1,26 @@
+- name: Download and Install the Google Signing Keys
+  shell: curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
+  become: yes
+  args:
+     executable: /bin/bash
+     warn: false
+
+- name: Download and Install the Kubernetes Repositories
+  shell: apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
+  become: yes
+  args:
+     executable: /bin/bash
+     warn: false
+
+- name: Update APT Sources
+  apt:
+    update_cache: yes
+
+- name: Install Packages from APT
+  apt: 
+    pkg:
+     - kubeadm
+     - kubelet
+     - kubectl
+
+
