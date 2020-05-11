@@ -1,8 +1,6 @@
 - name: Install Snap Packages
   snap: 
     name: 
-    - chromium
-    - teams-for-linux
     - powershell
     - code
     classic: yes 

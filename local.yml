@@ -8,14 +8,14 @@
   tasks:
     - include: tasks/users.yml
     - include: tasks/apt_packages.yml
-    - include: tasks/python_lib.yml
-    - include: tasks/create_deploykey.yml 
-    - include: tasks/add_deploykey.yml    
+    - include: tasks/python_lib.yml   
     - include: tasks/cron.yml
     - include: tasks/install_docker.yml
-#    - include: tasks/gnome.yml
     - include: tasks/custom_packages.yml
-#    - include: tasks/CB_Sensor.yml
-#    - include: tasks/java_jre8_install.yml
     - include: tasks/azcli_package.yml
     - include: tasks/citrix_package.yml
+#    - include: tasks/java_jre8_install.yml
+#    - include: tasks/CB_Sensor.yml
+#    - include: tasks/gnome.yml
+#    - include: tasks/create_deploykey.yml 
+#    - include: tasks/add_deploykey.yml 
