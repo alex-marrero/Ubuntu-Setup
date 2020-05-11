@@ -5,7 +5,7 @@
     warn: false
 
 - name: Add the Docker software repository
-  shell: echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu/  $(lsb_release -cs) stable" 
+  shell: echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu/  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/Docker.list
   args:
     executable: /bin/bash
 
