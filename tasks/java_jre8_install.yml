@@ -5,6 +5,7 @@
 
 - name: Install Oracle Java 8
   command: sh ./configure | make | make install
+  become: yes
   args:
     chdir: /tmp/jre1.8.0_241
     creates: /usr/lib/jvm/java-8-oracle
