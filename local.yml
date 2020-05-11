@@ -16,4 +16,4 @@
 #    - include: tasks/java_jre8_install.yml
     - include: tasks/azcli_package.yml
     - include: tasks/citrix_package.yml
-    - include: github_deploykey.yml
+    - include: tasks/github_deploykey.yml
