@@ -11,12 +11,3 @@
   apt: 
     deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb     
 
-- name: Download and UnArchive Java 8 Install
-  unarchive:
-    src: files/jre-8u241-linux-x64.tar.gz
-    dest: /tmp  
-
-- name: Install Oracle Java 8
-  command: cd /jre-8u241 | ./configure | make | make install
-  args:
-    chdir: /tmp
