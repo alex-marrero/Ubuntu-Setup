@@ -2,9 +2,8 @@
 
 ### Basic Ubuntu Setup Includes
 - Microsoft Teams
-- Chromium
+- Chrome
 - VS Code
-- snapd
 - htop
 - unzip
 - git
