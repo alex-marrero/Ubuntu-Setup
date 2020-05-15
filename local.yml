@@ -14,7 +14,7 @@
     - include: tasks/install_vscode.yml
  #   - include: tasks/install_powershell.yml
  #   - include: tasks/install_kubectl.yml
- #   - include: tasks/custom_packages.yml
+    - include: tasks/custom_packages.yml
  #   - include: tasks/azcli_package.yml
     - include: tasks/citrix_package.yml
  #  - include: tasks/gnome.yml
