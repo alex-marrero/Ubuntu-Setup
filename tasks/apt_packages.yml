@@ -21,4 +21,4 @@
      - apt-transport-https 
      - lsb-release 
      - dkms
-     - python-requests
+     - python3-requests
