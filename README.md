@@ -20,22 +20,16 @@
 - lsb-release 
 - gnupg
 - dkms
-- Citrix Workspace (On-Prem Only)
+- Citrix Workspace
 
 ##### Pending
-- VPN Setup
-  - Oracle Java8 JRE (Dependancy for VPN)
 - Displaylink Drivers for USB Docks
-- AD Join
-- Wifi Certs
 
 #### Instructions
 
 Run Setup.sh script first to prepare configuration by running below in a terminal window
     
     wget -O https://github.com/alex-marrero/Ubuntu-Setup/blob/master/setup.sh | bash
-
-
 
 
 ##### Credit
