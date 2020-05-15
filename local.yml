@@ -17,8 +17,4 @@
     - include: tasks/custom_packages.yml
     - include: tasks/azcli_package.yml
     - include: tasks/citrix_package.yml
-#    - include: tasks/java_jre8_install.yml
-#    - include: tasks/CB_Sensor.yml
-#    - include: tasks/gnome.yml
-#    - include: tasks/create_deploykey.yml 
-#    - include: tasks/add_deploykey.yml 
+    - include: tasks/gnome.yml
