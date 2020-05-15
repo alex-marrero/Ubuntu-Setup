@@ -22,3 +22,4 @@
      - lsb-release 
      - dkms
      - python3-requests
+     - snapd
