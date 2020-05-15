@@ -10,7 +10,7 @@
      - git
      - meld
      - python3
-     - python-pip
+     - python3-pip
      - binutils
      - curl
      - ghex
