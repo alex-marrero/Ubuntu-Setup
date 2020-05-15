@@ -8,3 +8,6 @@
   apt: 
     deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb     
 
+- name: INstall Microsoft Teams
+  apt:
+    deb: https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.5153_amd64.deb
