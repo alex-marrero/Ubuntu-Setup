@@ -5,6 +5,11 @@
     executable: /bin/bash
     warn: false
 
+- name: Enable Universe Repositories
+  apt_repository:
+    repo: deb http://us.archive.ubuntu.com/ubuntu/ focal universe
+    state: present
+
 - name: Update APT Sources
   apt:
     update_cache: yes
