@@ -30,7 +30,7 @@
 Run Setup.sh script first to prepare configuration by running below in a terminal window
 
     
-    wget -O https://github.com/alex-marrero/Ubuntu-Setup/blob/master/setup.sh | bash
+    wget -O - https://raw.githubusercontent.com/alex-marrero/Ubuntu-Setup/master/setup.sh | bash
 
 
 ##### Credit
