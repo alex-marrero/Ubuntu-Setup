@@ -7,8 +7,8 @@ sudo apt-get -y install software-properties-common git python3-pip &&
 
 echo "Upgrading PIP and installing Ansible"
 sleep 5
-pip3 install --upgrade pip &&
-pip3 install ansible
+sudo pip3 install --upgrade pip &&
+sudo pip3 install ansible
 
 echo "Start Ansible-Pull function"
 sleep 10
