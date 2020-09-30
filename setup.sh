@@ -1,9 +1,9 @@
 #!/bin/bash
 echo "Updating and Upgrading Linux Packages"
 sleep 5
-apt-get -y update && 
-apt-get -y upgrade &&
-apt-get -y install software-properties-common git &&
+sudo apt-get -y update && 
+sudo apt-get -y upgrade &&
+sudo apt-get -y install software-properties-common git &&
 
 echo "Upgrading PIP and installing Ansible"
 sleep 5
