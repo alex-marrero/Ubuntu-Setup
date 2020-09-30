@@ -3,7 +3,7 @@ echo "Updating and Upgrading Linux Packages"
 sleep 5
 sudo apt-get -y update && 
 sudo apt-get -y upgrade &&
-sudo apt-get -y install software-properties-common git &&
+sudo apt-get -y install software-properties-common git python3-pip &&
 
 echo "Upgrading PIP and installing Ansible"
 sleep 5
