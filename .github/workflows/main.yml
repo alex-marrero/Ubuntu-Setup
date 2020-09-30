@@ -27,4 +27,4 @@ jobs:
       uses: ansible/ansible-lint-action@master
     
     - name: Run Setup to Kickoff Playbook
-      run: wget -O https://github.com/alex-marrero/Ubuntu-Setup/blob/master/setup.sh | bash
+      run: wget https://github.com/alex-marrero/Ubuntu-Setup/blob/master/setup.sh | bash
