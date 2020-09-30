@@ -1,9 +1,14 @@
-- name: Download and Install the Microsoft Signing Key
-  shell: curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc.gpg > /dev/null
+- name: Download  Micirsoft's GPG Key
+  shell: curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
   args:
     executable: /bin/bash
     warn: false
-    become: yes
+
+- name: Install Micirsoft's GPG Key
+  shell: sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+  become: yes
+  args:
+    executable: /bin/bash
 
 - name: Add the Azure CLI software repository
   shell: echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/azure-cli.list

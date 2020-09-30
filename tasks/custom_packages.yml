@@ -1,9 +1,3 @@
-- name: Install Snap Packages
-  snap: 
-    name: 
-    - powershell
-    classic: yes 
-
 - name: Install Goolge Chrome
   apt: 
     deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb     
