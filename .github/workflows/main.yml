@@ -25,3 +25,6 @@ jobs:
     
     - name: ansible-lint
       uses: ansible/ansible-lint-action@master
+    
+    - name: Run Setup to Kickoff Playbook
+      run: setup.sh
