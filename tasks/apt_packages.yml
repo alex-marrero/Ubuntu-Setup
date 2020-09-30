@@ -7,7 +7,6 @@
      - gnupg-agent 
      - htop
      - unzip
-     - git
      - meld
      - python3
      - python3-pip

@@ -6,15 +6,15 @@
       changed_when: False
 
   tasks:
-    - include: tasks/users.yml
+#     - include: tasks/users.yml
     - include: tasks/apt_packages.yml
-    - include: tasks/python_lib.yml   
-    - include: tasks/cron.yml
- #   - include: tasks/install_docker.yml
+    - include: tasks/python_lib.yml
+#     - include: tasks/cron.yml
+    - include: tasks/install_docker.yml
     - include: tasks/install_vscode.yml
- #   - include: tasks/install_powershell.yml
+    - include: tasks/install_powershell.yml
     - include: tasks/install_kubectl.yml
     - include: tasks/custom_packages.yml
     - include: tasks/azcli_package.yml
     - include: tasks/citrix_package.yml
- #  - include: tasks/gnome.yml
+#    - include: tasks/gnome.yml

@@ -29,7 +29,6 @@
 
 Run Setup.sh script first to prepare configuration by running below in a terminal window
 
-if using 20.04 Release install ansible using pip as PPA is not yet available as of 5/2020, updated script to come
     
     wget -O https://github.com/alex-marrero/Ubuntu-Setup/blob/master/setup.sh | bash
 
