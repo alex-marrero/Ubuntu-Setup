@@ -26,5 +26,5 @@ jobs:
     - name: ansible-lint
       uses: ansible/ansible-lint-action@master
     
-    - name: Run Setup to Kickoff Playbook
-      run: sudo ./setup.sh
+    - name: Make Script Executable and  Kickoff Playbook
+      run: chmod +x ./setup.sh && ./setup.sh
