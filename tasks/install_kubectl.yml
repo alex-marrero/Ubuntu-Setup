@@ -5,12 +5,10 @@
      executable: /bin/bash
      warn: false
 
-- name: Download and Install the Kubernetes Repositories
-  shell: apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
-  become: yes
-  args:
-     executable: /bin/bash
-     warn: false
+- name: Enable Kubernetes Repositories
+  apt_repository:
+    repo: deb http://apt.kubernetes.io/ kubernetes- main
+    state: present
 
 - name: Update APT Sources
   apt:
