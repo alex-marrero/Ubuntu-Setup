@@ -1,14 +1,16 @@
 - name: Download and Install the Google Signing Keys
-  shell: curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add
+  shell: curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - 
   become: yes
   args:
      executable: /bin/bash
      warn: false
 
-- name: Enable Kubernetes Repositories
-  apt_repository:
-    repo: deb http://apt.kubernetes.io/ kubernetes- main
-    state: present
+- name: Download and Install the Google Signing Keys
+  shell: echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+  become: yes
+  args:
+     executable: /bin/bash
+     warn: false
 
 - name: Update APT Sources
   apt:
@@ -22,3 +24,16 @@
      - kubectl
 
 
+- name: Download and Install minikube
+  shell: curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube
+  become: yes
+  args:
+     executable: /bin/bash
+     warn: false
+
+- name: Download and Install minikube
+  shell: sudo mkdir -p /usr/local/bin/ && sudo install minikube /usr/local/bin/
+  become: yes
+  args:
+     executable: /bin/bash
+     warn: false

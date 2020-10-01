@@ -22,3 +22,4 @@
      - dkms
      - python3-requests
      - snapd
+     - virtualbox
