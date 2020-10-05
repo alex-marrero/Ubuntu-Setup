@@ -7,14 +7,16 @@
 
 - name: Enable Universe Repositories
   apt_repository:
+    become: yes
     repo: deb http://us.archive.ubuntu.com/ubuntu/ focal universe
     state: present
 
 - name: Update APT Sources
-  become: yes
   apt:
+    become: yes
     update_cache: yes
 
 - name: Install Powershell
   apt:
+    become: yes
     name: powershell
