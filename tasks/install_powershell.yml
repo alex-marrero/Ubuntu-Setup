@@ -11,6 +11,7 @@
     state: present
 
 - name: Update APT Sources
+  become: yes
   apt:
     update_cache: yes
 
