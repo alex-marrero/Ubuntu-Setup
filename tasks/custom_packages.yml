@@ -3,22 +3,10 @@
   apt: 
     deb: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb     
 
-- name: Install Microsoft Teams
+- name: Install Microsoft Teams Insider
   apt:
-    deb: https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.5153_amd64.deb
+    deb: https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams-insiders/teams-insiders_1.4.00.4855_amd64.deb
 
-- name: Add Powershell Repository into /etc/apt/sources.list - variable $(lsb_release -rs)
-  apt_repository:
-    repo: 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/$(lsb_release -rs)/prod/dists $(lsb_release -cs) main'
-    state: present
-
-- name: Update APT Sources
+- name: Install Powershell 7.1.2
   apt:
-    update_cache: yes
-
-
-- name: Install Powershell
-  apt:
-    pkg: powershell
-    state: latest
-    force: yes
+    deb: https://github.com/PowerShell/PowerShell/releases/download/v7.1.2/powershell_7.1.2-1.ubuntu.20.04_amd64.deb
