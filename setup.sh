@@ -3,6 +3,8 @@ echo "Updating and Upgrading Linux Packages"
 sleep 5
 sudo apt-get -y update && 
 sudo apt-get -y upgrade &&
+
+echo "Installing requirements"
 sudo apt-get -y install software-properties-common git python3-pip &&
 
 echo "Upgrading PIP and installing Ansible"

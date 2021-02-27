@@ -1,3 +1,4 @@
+---
 #Installs All Packages
 - name: Install Packages from APT
   apt: 
@@ -6,10 +7,16 @@
      - gnupg
      - gnupg-agent 
      - htop
+     - hollywood
+     - cmatrix
+     - ranger
+     - neofetch
      - unzip
      - meld
      - python3
      - python3-pip
+     - nodejs
+     - npm
      - binutils
      - curl
      - ghex
@@ -23,3 +30,6 @@
      - python3-requests
      - snapd
      - virtualbox
+     - xclip
+     - nano
+     - ncdu

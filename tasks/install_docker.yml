@@ -4,9 +4,9 @@
     executable: /bin/bash
     warn: false
 
-# Replaced with bionic focal not supported yet. $(lsb_release -cs)
+# Replaced with support codename if failing fallback to previous Ubuntu Release $(lsb_release -cs)
 - name: Add the Docker software repository
-  shell: echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu/  bionic stable" | sudo tee /etc/apt/sources.list.d/Docker.list
+  shell: echo "deb [arch=amd64] https://download.docker.com/linux/ubuntu/  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/Docker.list
   args:
     executable: /bin/bash
 
