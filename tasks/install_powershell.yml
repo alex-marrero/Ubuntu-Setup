@@ -7,7 +7,7 @@
 
 - name: Enable Universe Repositories
   apt_repository:
-    repo: deb http://us.archive.ubuntu.com/ubuntu/ $(lsb_release -cs) universe
+    repo: deb http://us.archive.ubuntu.com/ubuntu $(lsb_release -cs) universe
     state: present
 
 - name: Update APT Sources
