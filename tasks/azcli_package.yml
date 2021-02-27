@@ -1,24 +1,5 @@
-- name: Download  Micirsoft's GPG Key
-  shell: curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-  args:
-    executable: /bin/bash
-    warn: false
-
-- name: Install Micirsoft's GPG Key
-  shell: sudo install -o root -g root -m 644 packages.microsoft.gpg /usr/share/keyrings/
+- name: Install Azure CLI via script install
+  shell: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
   become: yes
   args:
     executable: /bin/bash
-
-- name: Add the Azure CLI Repository
-  apt_repository:
-    repo: 'deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $(lsb_release -cs) main'
-    state: present
-
-- name: Update APT Sources
-  apt:
-    update_cache: yes
-
-- name: Install Azure-CLI package
-  apt:
-    name: azure-cli
