@@ -7,10 +7,15 @@
   apt:
     deb: https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.5153_amd64.deb
 
-- name: Add Powershell Repository into /etc/apt/sources.list - Bionic
+- name: Add Powershell Repository into /etc/apt/sources.list - variable $(lsb_release -rs)
   apt_repository:
-    repo: 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/$(lsb_release -rs)/prod $(lsb_release -cs) main'
+    repo: 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/$(lsb_release -rs)/prod/dists $(lsb_release -cs) main'
     state: present
+
+- name: Update APT Sources
+  apt:
+    update_cache: yes
+
 
 - name: Install Powershell
   apt:

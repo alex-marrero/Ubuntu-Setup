@@ -1,5 +1,0 @@
-- name: Install Python Requests
-  pip:  
-    name: requests
-    umask: "0022"
-  become: True 

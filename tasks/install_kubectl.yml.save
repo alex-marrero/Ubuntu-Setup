@@ -1,0 +1,52 @@
+- name: Download and Install the Google Signing Keys
+  shell: curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - 
+  become: yes
+  args:
+     executable: /bin/bash
+     warn: false
+
+
+- name: Add Powershell Repository into /etc/apt/sources.list - variable $(lsb_release -rs)
+  apt_repository:
+    repo: '- name: Add Powershell Repository into /etc/apt/sources.list - variable $(lsb_release -rs)
+  apt_repository:
+    repo: 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/$(lsb_release -rs)/prod $(lsb_release -cs) main'
+    state: present
+'
+    state: present
+
+
+
+
+- name: Add Google apt Repository
+  shell: echo "deb https://apt.kubernetes.io/ kubernetes-$(lsb_release -cs) main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list
+  become: yes
+  args:
+     executable: /bin/bash
+     warn: false
+
+- name: Update APT Sources
+  apt:
+    update_cache: yes
+
+- name: Install Packages from APT
+  apt: 
+    pkg:
+     - kubeadm
+     - kubelet
+     - kubectl
+
+
+- name: Download and Install minikube
+  shell: curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 && chmod +x minikube
+  become: yes
+  args:
+     executable: /bin/bash
+     warn: false
+
+- name: Download and Install minikube
+  shell: sudo mkdir -p /usr/local/bin/ && sudo install minikube /usr/local/bin/
+  become: yes
+  args:
+     executable: /bin/bash
+     warn: false
