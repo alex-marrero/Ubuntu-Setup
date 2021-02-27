@@ -10,10 +10,10 @@
   args:
     executable: /bin/bash
 
-- name: Add the Azure CLI software repository
-  shell: echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/azure-cli.list
-  args:
-    executable: /bin/bash
+- name: Add the Azure CLI Repository
+  apt_repository:
+    repo: 'deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $(lsb_release -cs) main'
+    state: present
 
 - name: Update APT Sources
   apt:
