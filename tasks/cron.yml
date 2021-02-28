@@ -1,5 +1,2 @@
 - name: install cron job (ansible-pull)
-  cron: user="ansible" name="ansible provision" minute="*/15" job="/usr/bin/ansible-pull -U https://github.com/alex-marrero/Ubuntu-Setup.git > /var/log/ansible_provisioning_logs/provisioning_$(date +%m_%d_%y).log"
-
-- name: Make Log Location
-  file: path=/var/log/ansible_provisioning_logs state=directory
+  cron: user="ansible" name="ansible provision" minute="*/10" job="/usr/bin/ansible-pull -o -U https://github.com/alex-marrero/Ubuntu-Setup.git > /dev/null"

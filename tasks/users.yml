@@ -4,15 +4,3 @@
     shell: bin/bash
     uid: 900
     group: ansible
-
-- name: copy sudoers_ansible
-  copy: src=../files/sudoers_ansible dest=/etc/sudoers.d/ansible owner=root group=root mode=0440
-
-- name: Add Write permissions for ansible user to /var/log/ansible_provisioning_logs
-  file:
-    path: "/var/log/ansible_provisioning_logs"
-    state: directory
-    owner: ansible
-    group: ansible
-    mode: 0774
-  become: yes
