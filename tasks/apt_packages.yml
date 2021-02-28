@@ -33,5 +33,11 @@
      - xclip
      - nano
      - ncdu
-     - gimp
      - zsh
+    state: build-dep
+
+
+- name: Remove Packages with APT (test)
+  apt:
+     pkg:
+     - gimp
