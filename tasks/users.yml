@@ -1,6 +1,6 @@
 - name: create ansible user
   user: 
-    name=ansible
+    name: ansible
     shell: bin/bash
     uid=900
     group: ansible
