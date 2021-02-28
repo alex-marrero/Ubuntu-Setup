@@ -36,12 +36,13 @@
      - nano
      - ncdu
      - zsh
+     - gimp
 
 
-- name: Remove Packages with APT (test)
-  apt:
-    name: "{{ packages }}"
-    state: absent
-  vars:
-    packages:
-    - gimp
+#- name: Remove Packages with APT (test)
+#  apt:
+#    name: "{{ packages }}"
+#    state: absent
+#  vars:
+#    packages:
+#
