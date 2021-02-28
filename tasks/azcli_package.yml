@@ -1,5 +1,6 @@
 - name: Install Azure CLI via script install
   shell: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
   become: yes
+  warn: false
   args:
     executable: /bin/bash
