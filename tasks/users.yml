@@ -6,6 +6,7 @@
 
 - name: Add Write permissions to /var/log/ansible_provisioning_logs
   ansible.posix.acl:
+    become: yes
     path: /var/log/ansible_provisioning_logs/
     entity: ansible
     etype: user
