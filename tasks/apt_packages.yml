@@ -37,6 +37,7 @@
      - ncdu
      - zsh
      - gimp
+     - steam-installer
 
 - name: Fix Firefox 
   apt:
