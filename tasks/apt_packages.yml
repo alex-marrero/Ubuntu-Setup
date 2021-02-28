@@ -3,7 +3,6 @@
 - name: Install Packages from APT
   apt:
     name: "{{ packages }}"
-    state: build-dep
   vars:
     packages:
      - apt-transport-https
