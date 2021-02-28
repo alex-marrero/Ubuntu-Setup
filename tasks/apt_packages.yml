@@ -1,8 +1,11 @@
 ---
 #Installs All Packages
 - name: Install Packages from APT
-  apt: 
-     pkg:
+  apt:
+    name: "{{ packages }}"
+    state: build-dep
+  vars:
+    packages:
      - apt-transport-https
      - gnupg
      - gnupg-agent 
@@ -34,10 +37,12 @@
      - nano
      - ncdu
      - zsh
-    state: build-dep
 
 
 - name: Remove Packages with APT (test)
   apt:
-     pkg:
-     - gimp
+    name: "{{ packages }}"
+    state: absent
+  vars:
+    packages:
+    - gimp
