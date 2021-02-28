@@ -1,5 +1,9 @@
 - name: create ansible user
-  user: name=ansible uid=900
+  user: 
+    name=ansible
+    shell: bin/bash
+    uid=900
+    group: ansible
 
 - name: copy sudoers_ansible
   copy: src=../files/sudoers_ansible dest=/etc/sudoers.d/ansible owner=root group=root mode=0440
@@ -10,5 +14,5 @@
     state: directory
     owner: ansible
     group: ansible
-    mode: 0750
+    mode: 0774
   become: yes
