@@ -4,3 +4,11 @@
 - name: copy sudoers_ansible
   copy: src=../files/sudoers_ansible dest=/etc/sudoers.d/ansible owner=root group=root mode=0440
 
+- name: Add Write permissions to /var/log/ansible_provisioning_logs
+  ansible.posix.acl:
+    path: /var/log/ansible_provisioning_logs/
+    entity: ansible
+    etype: user
+    permissions: rw
+    default: yes
+    state: present
