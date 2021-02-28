@@ -38,6 +38,10 @@
      - zsh
      - gimp
 
+- name: Fix Firefox 
+  apt:
+    name: firefox=85.0
+
 
 #- name: Remove Packages with APT (test)
 #  apt:
