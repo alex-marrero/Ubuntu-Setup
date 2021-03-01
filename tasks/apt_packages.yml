@@ -42,6 +42,7 @@
 - name: Fix Firefox 
   apt:
     name: firefox=85.0
+  state: installed
 
 
 #- name: Remove Packages with APT (test)
